@@ -1,0 +1,20 @@
+{
+  "name": "full-stack-development-mfe",
+  "version": "1.0.0",
+  "description": "Micro Frontend architecture: shell + 5 course MFEs",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --prefix-colors \"bgMagenta.bold,bgBlue.bold,bgYellow.bold,bgCyan.bold,bgGreen.bold,bgRed.bold\" --names \"SHELL,HTML,CSS,JS,REACT,NODE\" \"npm run dev --prefix shell\" \"npm run dev --prefix html\" \"npm run dev --prefix css\" \"npm run dev --prefix javascript\" \"npm run dev --prefix reactjs\" \"npm run dev --prefix nodejs\"",
+    "dev:shell": "npm run dev --prefix shell",
+    "dev:html": "npm run dev --prefix html",
+    "dev:css": "npm run dev --prefix css",
+    "dev:js": "npm run dev --prefix javascript",
+    "dev:react": "npm run dev --prefix reactjs",
+    "dev:node": "npm run dev --prefix nodejs",
+    "install:all": "npm i --prefix shell && npm i --prefix html && npm i --prefix css && npm i --prefix javascript && npm i --prefix reactjs && npm i --prefix nodejs",
+    "build:all": "npm run build --prefix shell && npm run build --prefix html && npm run build --prefix css && npm run build --prefix javascript && npm run build --prefix reactjs && npm run build --prefix nodejs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
